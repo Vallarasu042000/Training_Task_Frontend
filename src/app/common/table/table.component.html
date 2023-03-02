@@ -1,0 +1,36 @@
+
+<div class="example-container mat-elevation-z8">
+  <div class="example-header">
+    <mat-form-field>
+      <input matInput  placeholder="Filter" (keyup)applyFilter >
+    </mat-form-field>
+  </div>
+    <mat-table #table [dataSource]="dataSource">
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="empName">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.empName}} </mat-cell>
+      </ng-container>
+  
+      <!-- Age Column -->
+      <ng-container matColumnDef="age">
+        <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.age}} </mat-cell>
+      </ng-container>
+  
+      <!-- Dept Column -->
+      <ng-container matColumnDef="dept">
+        <mat-header-cell *matHeaderCellDef> Department </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.dept}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>

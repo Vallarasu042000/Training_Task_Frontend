@@ -1,0 +1,19 @@
+.example-container {
+    display: flex;
+    -ms-flex-item-align: center;
+    flex-direction: column;
+    -ms-flex-align: center;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  mat-form-field.mat-form-field {
+    font-size: 16px;
+  }
+  #btn{
+    background-color:rgb(201, 143, 143);
+  }
+  .text-danger{
+    color: red;
+  }
