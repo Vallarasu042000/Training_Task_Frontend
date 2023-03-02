@@ -67,7 +67,10 @@ import { CreateProfileComponent } from './create-profile/create-profile.componen
 import { PopupComponent } from './create-profile/popup/popup.component';
 import { DetailsComponent } from './create-profile/details/details.component';
 import { RouterModule } from '@angular/router';
-
+import { BehaviourSubjecctComponent } from './behaviour-subjecct/behaviour-subjecct.component';
+import { Compo1Component } from './bahavior-subject/compo1/compo1.component';
+import { Compo2Component } from './bahavior-subject/compo2/compo2.component';
+import { Compo3Component } from './bahavior-subject/compo3/compo3.component';
 
 @NgModule({
   declarations: [
@@ -86,8 +89,13 @@ import { RouterModule } from '@angular/router';
     CreateProfileComponent,
     PopupComponent,
     DetailsComponent,
+    BehaviourSubjecctComponent,
+    Compo1Component,
+    Compo2Component,
+    Compo3Component,
   ],
-  imports: [ReactiveFormsModule,
+  imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     MatInputModule,
