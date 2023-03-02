@@ -1,0 +1,78 @@
+<mat-tab-group class="menu">
+    <mat-tab label="First"> 
+        <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Personal data
+                </mat-panel-title>
+                <mat-panel-description>
+                  Type your name and age
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              <mat-form-field>
+                <input matInput placeholder="First name">
+              </mat-form-field>
+          
+              <mat-form-field>
+                <input matInput placeholder="Age">
+              </mat-form-field>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Self aware panel
+                </mat-panel-title>
+                <mat-panel-description>
+                  Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+               </mat-tab>
+    <mat-tab label="Second"> 
+        <h2 class="mb-5 text-center">Angular Form Validation Example</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" formControlName="name">
+    <!-- <div *ngIf="getControl.name.touched && getControl.name.invalid" class="text-danger">
+      <div *ngIf="getControl.name.errors.required">Name is required.</div>
+      <div *ngIf="getControl.name.errors?.minlength">Minimum 4 character are required.</div>
+    </div> -->
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" class="form-control" formControlName="email">
+    <!-- <div *ngIf="getControl.email.touched && getControl.email.invalid" class="text-danger">
+      <div *ngIf="getControl.email.errors.required">Email is required.</div>
+      <div *ngIf="getControl.email.errors.email">Email seems invalid.</div>
+    </div> -->
+  </div>
+
+  <div class="form-group">
+    <label>Phone</label>
+    <input type="text" class="form-control" formControlName="phone">
+    <!-- <div *ngIf="getControl.phone.touched && getControl.phone.invalid" class="text-danger">
+      <div *ngIf="getControl.phone.errors.required">Phone is required.</div>
+    </div> -->
+  </div>
+
+  <div class="form-group">
+    <label>Message</label>
+    <textarea type="text" class="form-control" formControlName="message"></textarea>
+    <!-- <div *ngIf="getControl.message.touched && getControl.message.invalid" class="text-danger"> -->
+      <!-- <div *ngIf="getControl.message.errors.['required']">Message is required.</div> -->
+    <!-- </div> -->
+  </div>
+  <button class="btn btn-danger btn-block" type="submit">Submit</button>
+</form>
+ </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+  </mat-tab-group>

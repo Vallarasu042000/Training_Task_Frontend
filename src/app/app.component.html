@@ -1,0 +1,14 @@
+<!-- <app-table></app-table> -->
+<!-- <app-formfield></app-formfield>
+<div>
+    <app-parent></app-parent>
+</div> -->
+<nav mat-tab-nav-bar ngClass = "tabs">
+    <a mat-tab-link routerLink="/home" routerLinkActive="active-link">Home</a>
+    <a mat-tab-link routerLink="/create-profile" routerLinkActive="active-link">Create Profile</a>
+    <a mat-tab-link routerLink="/main-tap" routerLinkActive="active-link">About</a>
+ </nav> 
+    
+<div>	
+    <router-outlet></router-outlet>	
+  </div>

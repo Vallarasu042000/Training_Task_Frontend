@@ -1,0 +1,101 @@
+
+<div class="example-container" >
+    <form [formGroup] ="empFormGrp" (ngSubmit) = "onSumbit()">
+      <!-- <div [formGroup] ="userFormgrp" > -->
+        EmpName :<input type="text"  formControlName ="name" > 
+        
+        <!-- </div> -->
+        EmaiId :<input type="email"  formControlName="email"> 
+        PhoneNo:<input type="text" formControlName="phone">
+        Date of Birth:<input type="date" formControlName ="dob">
+      <!-- </div> -->
+      <button id="btn" type="submit" (click) ="clickSubmit()">Submit</button>
+   
+  </form>
+        
+<!--         
+            <span style="color: antiquewhite;" *ngIf ="!empFormGrp.get('email')valid">
+                please enter valid email.
+            </span> -->
+
+       
+ 
+      
+        <!-- <div formArrayName = "skils" >
+            <ng-container *ngFor = "let skill of empFormGrp.get('skils').controls;index of i" >
+                <input type="text" placeholder="add Skills..."  formControlName ="i">
+            </ng-container>
+          
+        </div> -->
+       
+    
+</div>
+
+
+<div class="example-container mat-elevation-z8">
+    <!-- <div class="example-header">
+      <mat-form-field>
+        <input matInput  placeholder="Filter" (keyup)applyFilter >
+      </mat-form-field>
+    </div> -->
+      <mat-table #table [dataSource]="dataSource">
+        <!-- ID Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+        </ng-container>
+    
+        <!-- Age Column -->
+        <ng-container matColumnDef="phone">
+          <mat-header-cell *matHeaderCellDef> Phone.No </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.phone}} </mat-cell>
+        </ng-container>
+    
+        <!-- Dept Column -->
+        <ng-container matColumnDef="dob">
+          <mat-header-cell *matHeaderCellDef> Date OF Birth </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.dob | date:'dd-MM-yyyy hh:mm:ss a':'+0530'}} </mat-cell>
+        </ng-container>
+    
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  
+
+    <!-- <form [formGroup] = "userGroup"(ngSubmit) = "onSumbit()">
+        <div class="example-container" >
+  <mat-form-field formContolName = "name">
+    <input matInput placeholder="Name" >
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Email"  formContolName = "email">
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Date Of Birth"  formContolName = "dob"/>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Address" formContolName = "address"></textarea>
+</mat-form-field>
+
+ 
+<button mat-raised-button color="primary" type="submit" >Submit</button>
+
+</div>
+</form> -->
+
+
+
+  

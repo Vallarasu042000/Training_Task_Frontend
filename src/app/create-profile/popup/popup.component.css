@@ -1,0 +1,15 @@
+.btn{
+    padding: 30px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    justify-items: center;
+    
+}
+.head{
+    display: flex;
+    justify-content: center;
+    
+}
+
+

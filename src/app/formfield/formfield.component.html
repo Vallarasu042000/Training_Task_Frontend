@@ -1,0 +1,23 @@
+
+   <div class="container" id="main" >
+    <form [formGroup] ="empFormGrp" (ngSubmit) = "onSumbit()">
+        EmpName :<input type="text"  formControlName ="name" >
+    
+        EmaiId :<input type="email"  formControlName="email">
+        
+            <span style="color: antiquewhite;" *ngIf ="!empFormGrp.get('email')valid">
+                please enter valid email.
+            </span>
+
+        PhoneNo:<input type="number" formControlName="phone">
+ 
+        Password:<input type="password" formControlName ="password">
+        <!-- <div formArrayName = "skils" >
+            <ng-container *ngFor = "let skill of empFormGrp.get('skils').controls;index of i" >
+                <input type="text" placeholder="add Skills..."  formControlName ="i">
+            </ng-container>
+          
+        </div> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

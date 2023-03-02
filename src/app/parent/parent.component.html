@@ -1,0 +1,17 @@
+<h3>@ViewChild using Directive</h3>;
+<div>
+  Change Color: <br><br>
+  <mat-radio-button value="1" color="primary" (click)= "changeColor('green')">          
+    Green
+  </mat-radio-button><br><br>
+   
+  <mat-radio-button value="2" color="warn"(click)= "changeColor('cyan')">
+   Cyan
+  </mat-radio-button><br><br>
+   
+  <mat-radio-button value="3" color="accent"(click)= "changeColor('blue')">
+   Blue
+  </mat-radio-button>
+</div> 
+<app-child1></app-child1>
+<app-child2></app-child2>
